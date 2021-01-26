@@ -1,15 +1,24 @@
 
 ## Acceptance Criteria
 
-• Tabs must be scrollable
-• Chevrons must be visible if the # of tabs are more than visible area
-• All tabs must be of equal width and by default, 3 tabs must be visible
-• When the last tab is focused the right chevron must not be visible. Likewise, when the first tab is
-focused the left chevron should not be visible
-• On click of +, tabs must be added – Max # 10
-• On click of x, tabs must be deleted with proper alert (avoid using browser alert)– one tab must remain
-• x mark should be visible on hover
-• Tabs must be draggable – existing react libraries can be used for this.
+- Tabs must be scrollable.
+- Chevrons must be visible if the number of tabs are more than visible area i.e. more than 5 tabs.
+- All tabs must be of equal width and by default, 3 tabs must be visible.
+- When the last tab is focused the right chevron must not be visible. Likewise, when the first tab is
+focused the left chevron should not be visible.
+- On click of +, tabs must be added – Max # 10
+- On click of x, tabs must be deleted with proper alert (avoid using browser alert) – one tab must remain.
+- x mark should be visible on hover
+- Tabs must be draggable – React draggable library
+- This component should be integrated in a web page in the site
+- Application is responsive.
+
+## Technology Stack
+- React (17.0.1)
+- Node (v15.6.0)
+- JavaScript/ES6+
+- HTML5
+- CSS3
 
 # Getting Started with Create React App
 
