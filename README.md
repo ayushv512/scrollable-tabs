@@ -13,6 +13,10 @@ focused the left chevron should not be visible.
 - This component should be integrated in a web page in the site
 - Application is responsive.
 
+ 
+<img width="719" alt="Screenshot 2021-01-27 at 12 55 04 AM" src="https://user-images.githubusercontent.com/32220773/105897843-b5d7f500-603e-11eb-865a-914a43aaf9cd.png">
+
+
 ## Technology Stack
 - React (17.0.1)
 - Node (v15.6.0)
