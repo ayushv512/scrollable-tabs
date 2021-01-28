@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TabListWrapper } from './style.js';
 
 const TabList = (props) => {
+    const [startIndex, setStartIndex] = useState(0);
+
     const tabClickHandler = (index) => {
         props.onChange(index);
     };
-
-    const closeClickHandler = (index) => {
-        props.onClose(index);
+    const closeClickHandler = (index, tabItem) => {
+        props.onClose(index,tabItem);
+    };
+    const tabDragHandler = (startIndex) => {
+        setStartIndex(startIndex);
+    };
+    const onDropHandler = (e) => {
+        let endIndex = e.target.id - 1;
+        props.onDrag(startIndex, endIndex);
     };
 
     const children = React.Children.map(props.children, (child, index) => {
@@ -15,7 +23,8 @@ const TabList = (props) => {
             index,
             isActive: index === props.value,
             tabClick: tabClickHandler,
-            closeClick: closeClickHandler
+            closeClick: closeClickHandler,
+            tabDrag: tabDragHandler
         });
     });
 
@@ -23,6 +32,7 @@ const TabList = (props) => {
         <TabListWrapper
             role="tablist"
             aria-label="scrollable tabs"
+            onDrop={onDropHandler}
         >
             {children}
         </TabListWrapper>

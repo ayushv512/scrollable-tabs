@@ -4,15 +4,16 @@ import {deviceWidths} from '../../config/config';
 export const HeaderWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 42%;
     margin: 0 auto;
     color: #0074d6;
 
-    img{
+    img {
         margin: 40px 0;
     }
 
-    h2{
+    div {
+        font-size: 20px;
         margin: 40px 0;
         text-decoration: underline;
         font-weight: bold;
@@ -20,10 +21,10 @@ export const HeaderWrapper = styled.div`
     
     @media (max-width:${deviceWidths.smallDesktop}) {
         width: 100%;
-        img{
+        img {
             margin: 20px 5px;
         }
-        h2{
+        div {
             margin: 20px 5px;
             font-size: 20px;
         }

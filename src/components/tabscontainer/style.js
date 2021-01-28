@@ -20,6 +20,9 @@ export const TabsContainerWrapper = styled.div`
                 outline: none;
             }
         }
+        .btn-hide {
+            visibility: hidden;
+        }
     }
     
     @media (max-width:${deviceWidths.smallDesktop}) {

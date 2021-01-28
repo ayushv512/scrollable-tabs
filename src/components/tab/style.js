@@ -16,7 +16,7 @@ export const TabButton = styled.button`
     }
     &.tab-active {
         color: #0074d6;
-        border-bottom: 1px solid #0074d6;
+        border-bottom: 3px solid #0074d6;
     }
 `
 
@@ -32,5 +32,8 @@ export const Closebutton = styled.button`
     z-index: 1;
     &:focus{
         outline: none;
+    }
+    .btn-hide {
+        visibility: hidden;
     }
 `

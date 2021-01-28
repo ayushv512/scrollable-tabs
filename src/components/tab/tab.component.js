@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BtnsWrapper, TabButton, Closebutton } from './style';
-import Draggable from 'react-draggable';
 
 const Tab = (props) => {
     const [closeButton, setCloseButton] = useState(true);
@@ -11,36 +10,41 @@ const Tab = (props) => {
     const tabMouseLeaveHandler = () => {
         setCloseButton(true)
     };
+    const onTabDragStart = (event, index) => {
+        props.tabDrag(index);
+    }
+    const onTabDragOver = (event) => {
+        event.preventDefault();
+    }
+    const closeBtnClass = closeButton ? 'btn-hide' : '';
 
     return (
-        <Draggable>
-            <BtnsWrapper
-                onTouchStart={tabMouseEnterHandler}
-                onMouseEnter={tabMouseEnterHandler}
-                onMouseLeave={tabMouseLeaveHandler}
+        <BtnsWrapper
+            draggable="true"
+            onMouseEnter={tabMouseEnterHandler}
+            onMouseLeave={tabMouseLeaveHandler}
+            onDragStart={(e) => onTabDragStart(e, props.index)}
+            onDragOver={onTabDragOver}
+        >
+            <Closebutton
+                role="closebtn"
+                id={'close-btn-' + props.index}
+                onClick={() => props.closeClick(props.index, props.tabItem)}
+                title={`Delete Tab ${props.index + 1}`}
+                className={closeBtnClass}
             >
-                <Closebutton
-                    role="closebtn"
-                    id={'close-btn-' + props.index}
-                    onTouchStart={() => props.closeClick(props.index)}
-                    onClick={() => props.closeClick(props.index)}
-                    title={`Delete Tab ${props.index + 1}`}
-                    hidden={closeButton}
-                >
-                    <i className="fa fa-times" aria-hidden="true"></i>
-                </Closebutton>
-                <TabButton
-                    role="tab"
-                    id={props.id}
-                    aria-controls={props['aria-controls']}
-                    className={props.isActive ? 'tab-active' : ''}
-                    onTouchStart={() => props.tabClick(props.index)}
-                    onClick={() => props.tabClick(props.index)}
-                >
-                    {props.label}
-                </TabButton>
-            </BtnsWrapper>
-        </Draggable>
+                <i className="fa fa-times" aria-hidden="true"></i>
+            </Closebutton>
+            <TabButton
+                role="tab"
+                id={props.id}
+                aria-controls={props['aria-controls']}
+                className={props.isActive ? 'tab-active' : ''}
+                onClick={() => props.tabClick(props.index)}
+            >
+                {props.tabItem.label}
+            </TabButton>
+        </BtnsWrapper>
     )
 }
 

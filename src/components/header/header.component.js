@@ -9,9 +9,9 @@ const Header = () => {
                 data-src="https://63ckz2pq4g240d5ni28x09ke-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/lsq_logo.svg"
                 alt="LeadSquared"
                 height="30"
-                width="150">
+                width="180">
             </img>
-            <h2>Scrollable Tabs</h2>
+            <div>Scrollable Tabs</div>
         </HeaderWrapper>
     )
 }
