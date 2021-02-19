@@ -3,11 +3,10 @@ import {deviceWidths} from '../../config/config';
 
 export const HeaderWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
-    width: 42%;
-    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
     color: #0074d6;
-
+    border: 1px solid #CCC;
     img {
         margin: 40px 0;
     }
