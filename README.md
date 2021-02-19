@@ -13,8 +13,8 @@ focused the left chevron should not be visible.
 - This component should be integrated in a web page in the site
 - Application is responsive.
 
-<img width="1679" alt="Screenshot 2021-02-20 at 1 14 45 AM" src="https://user-images.githubusercontent.com/32220773/108553892-50afb080-7319-11eb-98ea-a00f2d0b01e5.png">
-<img width="444" alt="Screenshot 2021-02-20 at 1 15 07 AM" src="https://user-images.githubusercontent.com/32220773/108553906-53120a80-7319-11eb-81e1-4207b2fa9d93.png">
+<img width="707" alt="Screenshot 2021-02-20 at 1 24 17 AM" src="https://user-images.githubusercontent.com/32220773/108554787-9ae56180-731a-11eb-950e-02e593f7fa8f.png">
+<img width="430" alt="Screenshot 2021-02-20 at 1 24 58 AM" src="https://user-images.githubusercontent.com/32220773/108554794-9caf2500-731a-11eb-8803-ae5a557000f8.png">
 
 
 ## Technology Stack
