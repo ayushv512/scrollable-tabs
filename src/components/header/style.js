@@ -4,7 +4,7 @@ import {deviceWidths} from '../../config/config';
 export const HeaderWrapper = styled.div`
     display: flex;
     margin-bottom: 20px;
-    padding-left: 20px;
+    justify-content: center;
     color: #0074d6;
     border: 1px solid #CCC;
     img {
